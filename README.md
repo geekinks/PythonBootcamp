@@ -6,6 +6,6 @@ Students can use this space to share their thoughts on course content, instructo
 
 ##  List of Students
 1. [Adamu muhd](https://github.com/AdamsGeeky)
-2. [sample](https://github.com/)
+2. [sample](https://github.com/https://github.com/Aghetto83)
 3. [salmpe](https://github.com/)
 4. [sample](https://github.com/)
