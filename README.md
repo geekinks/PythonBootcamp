@@ -5,7 +5,7 @@ This repository serves as a platform for students of Cohort 1 in the Python Prog
 Students can use this space to share their thoughts on course content, instructor engagement, hands-on projects, flexibility, and suggestions for improvement. 
 
 ##  List of Students
-1. [Adamu muhd](https://github.com/AdamsGeeky)
+1. [Salma Moh](https://github.com/salmamoh36)
 2. [sample](https://github.com/)
 3. [salmpe](https://github.com/)
 4. [sample](https://github.com/)
