@@ -1,0 +1,3 @@
+Hello, World!
+I love Python!
+Programming is fun!I am learning Python

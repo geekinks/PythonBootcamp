@@ -6,6 +6,4 @@ Students can use this space to share their thoughts on course content, instructo
 
 ##  List of Students
 1. [Salma Moh](https://github.com/salmamoh36)
-2. [sample](https://github.com/)
-3. [salmpe](https://github.com/)
-4. [sample](https://github.com/)
+2. [Fatima Suleiman](https://github.com/faeema)
