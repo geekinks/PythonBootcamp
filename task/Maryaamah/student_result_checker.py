@@ -1,4 +1,4 @@
-gitprint("==========================Student Result Checker================")
+print("==========================Student Result Checker================")
 
 name = input ("Enter your name: ")
 age = int (input ("Enter your age: "))
