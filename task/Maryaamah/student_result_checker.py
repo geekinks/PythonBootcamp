@@ -1,4 +1,4 @@
-print("==========================Student Result Checker================")
+print("==========================Student Result Checker======================")
 
 name = input ("Enter your name: ")
 age = int (input ("Enter your age: "))
@@ -15,6 +15,7 @@ average_marks = total_marks / 5
 
 if average_marks >= 70:
     grade = "A"
+    print(grade)
 elif average_marks >= 60:
     grade = "B"
 elif average_marks >= 50:
@@ -29,6 +30,8 @@ if average_marks >= 40:
     result = "Pass"     
 else:
     result = "Fail"
+    print(total_marks)
+    print(average_marks)
 
     
 
