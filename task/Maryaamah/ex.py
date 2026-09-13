@@ -11,11 +11,52 @@ text.get_text
 import integer
 integer.get_integer
 
-import grade
-grade.calculate_grade
 
-import result
-result.calculate_result
+ 
+
+
+
+
+
+
+
+def calculate_grade(average):
+
+    if average >= 70:
+        return "A"
+
+    elif average >= 60:
+        return "B"
+
+    elif average >= 50:
+        return "C"
+
+    elif average >= 45:
+        return "D"
+
+    elif average >= 40:
+        return "E"
+
+    else:
+        return "F"
+
+
+
+def calculate_result(scores):
+
+    total = sum(scores)
+
+    average = total / len(scores)
+
+    grade = grade.calculate_grade(average)
+
+    if average >= 40:
+        result = "Pass"
+    else:
+        result = "Fail"
+
+    return total, average, grade, result
+
 
 def collect_student():
 
@@ -61,7 +102,7 @@ def collect_student():
 
 def display_result(student):
 
-    total, average, grade, result = result.display_result(
+    total, average, grade, result = calculate_result(
         student["scores"]
     )
 

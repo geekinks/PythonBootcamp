@@ -17,3 +17,4 @@ def get_integer(prompt, field_name, minimum=None, maximum=None):
 
         except ValueError:
             print(f"Error: Please enter a valid number for {field_name}.")
+
