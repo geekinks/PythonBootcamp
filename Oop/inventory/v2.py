@@ -21,5 +21,9 @@ item2.price = 1000
 item2.quantity = 3
 bill2 =item2.calculate_total_price(item2.price, item2.quantity)
 
-
-print(f'the bills for item1 {bill1} and {bill2} for item2')
+item3 = Item()
+item3.name = "charger"
+item3.price = 50
+item3.quantity = 2
+bill3 = item3.calculate_total_price(item3.price, item3.quantity)
+print(f'the bills for item1 {bill1}, item3 {bill3} and {bill2} for item2')
