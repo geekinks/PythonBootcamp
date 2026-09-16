@@ -8,21 +8,27 @@ class Student:
 
     def set_profile(self, name: str, matric_no: str, department: str, level: int):
         # TODO 1: Set instance attributes for name, matric_no, department, and level
+        self.name = name
+        self.matric_no = matric_no
+        self.department = department
+        self.level = level
         # TODO 2: Initialize self.courses as an empty list
-        pass
+        self.courses = []
 
     def register_course(self, course_code: str):
         # TODO 3: Add course_code to self.courses only if it is not already in the list
-        pass
+        if course_code not in self.courses:
+            self.courses.append(course_code)
 
     def drop_course(self, course_code: str):
         # TODO 4: Remove course_code from self.courses if it exists in the list
-        pass
+        if course_code in self.courses:
+            self.courses.remove(course_code)
 
     def get_profile_card(self) -> str:
         # TODO 5: Return formatted string:
         # "Student: <name> | Matric: <matric_no> | Dept: <department> | Level: <level> | Courses: <count>"
-        pass
+        return f"Student: {self.name} | Matric: {self.matric_no} | Dept: {self.department} | Level: {self.level} | Courses: {len(self.courses)}"
 
 
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---

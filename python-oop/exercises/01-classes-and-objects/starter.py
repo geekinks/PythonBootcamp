@@ -6,14 +6,35 @@ Complete the TODO items below and run this file to test your solution.
 # TODO 1: Define an empty class named Student
 # class Student:
 #     pass
+class student:
+    def _init_(self,name,age,department):
+        self.name=name
+        self.age=age
+        self.department=department
+        student1=student("maryam",22,"computer_science") 
+        student2 = student("hafsat",21,"statistic") 
+        
+
+
 
 
 # TODO 2: Define an empty class named Lecturer
+class lecturer:
+    def _init_(self,"name","department","gender"):
+        self.name=name
+        self.department=department
+        self.gender=self.gender
+        lecturer=lecturer("muhammad","computer","male")
 
+    
 
 # TODO 3: Define an empty class named Course
 
-
+class course:
+    def _init_(self,"name","code",):
+        self.name=name
+        self.code=code
+        course=course("python",101)
 
 # TODO 4: Instantiate two Student objects into variables `student1` and `student2`
 student1 = None
