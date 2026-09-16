@@ -11,8 +11,7 @@ class student:
         self.name=name
         self.age=age
         self.department=department
-        student1=student("maryam",22,"computer_science") 
-        student2 = student("hafsat",21,"statistic") 
+    
         
 
 
@@ -24,7 +23,6 @@ class lecturer:
         self.name=name
         self.department=department
         self.gender=self.gender
-        lecturer=lecturer("muhammad","computer","male")
 
     
 
@@ -34,11 +32,9 @@ class course:
     def _init_(self,"name","code",):
         self.name=name
         self.code=code
-        course=course("python",101)
 
 # TODO 4: Instantiate two Student objects into variables `student1` and `student2`
 student1 = None
-student2 = None
 
 # TODO 5: Instantiate one Lecturer object into `lecturer1`
 lecturer1 = None
