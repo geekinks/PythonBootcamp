@@ -11,11 +11,6 @@ class student:
         self.name=name
         self.age=age
         self.department=department
-    
-        
-
-
-
 
 # TODO 2: Define an empty class named Lecturer
 class lecturer:
@@ -23,8 +18,6 @@ class lecturer:
         self.name=name
         self.department=department
         self.gender=self.gender
-
-    
 
 # TODO 3: Define an empty class named Course
 
