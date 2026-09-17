@@ -4,36 +4,25 @@ Complete the TODO items below and run this file to test your solution.
 """
 
 # TODO 1: Define an empty class named Student
-# class Student:
-#     pass
-class student:
-    def _init_(self,name,age,department):
-        self.name=name
-        self.age=age
-        self.department=department
+class Student:
+    pass
 
 # TODO 2: Define an empty class named Lecturer
-class lecturer:
-    def _init_(self,"name","department","gender"):
-        self.name=name
-        self.department=department
-        self.gender=self.gender
+class Lecturer:
+    pass
 
 # TODO 3: Define an empty class named Course
-
-class course:
-    def _init_(self,"name","code",):
-        self.name=name
-        self.code=code
+class Course:
+    pass
 
 # TODO 4: Instantiate two Student objects into variables `student1` and `student2`
-student1 = None
-
+student1 = Student()
+student2 = Student()
 # TODO 5: Instantiate one Lecturer object into `lecturer1`
-lecturer1 = None
-
+lecturer1 = Lecturer()
 # TODO 6: Instantiate one Course object into `course1`
-course1 = None
+course1 = Course()
+
 
 
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
