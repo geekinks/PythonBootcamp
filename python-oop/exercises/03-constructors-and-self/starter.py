@@ -7,22 +7,28 @@ class Course:
     def __init__(self, code: str, title: str, credit_units: int = 3):
         # TODO 1: Initialize self.code, self.title, and self.credit_units
         pass
-
-
+        self.code = code
+        self.title = title  
+        self.credit_units = credit_units            
 class Student:
     def __init__(self, name: str, matric_no: str, department: str, level: int = 100):
         # TODO 2: Initialize self.name, self.matric_no, self.department, self.level
+        self.matric_no = matric_no
+        self.department = department
+
         # TODO 3: Initialize self.enrolled_courses as an empty list
         pass
-
+        self.enrolled_courses = []
     def enroll(self, course: Course):
         # TODO 4: Append course to self.enrolled_courses if not already present
         pass
+        if course not in self.enrolled_courses:
+            self.enrolled_courses.append(course)
 
     def total_credits(self) -> int:
         # TODO 5: Calculate and return the sum of credit_units across all enrolled courses
         pass
-
+        return sum(course.credit_units for course in self.enrolled_courses)
 
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
 if __name__ == "__main__":
