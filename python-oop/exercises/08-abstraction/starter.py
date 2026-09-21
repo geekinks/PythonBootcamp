@@ -9,9 +9,14 @@ class GradeCalculator(ABC):
     # TODO 1: Define abstractmethod calculate_gpa(self, scores: list[float]) -> float
     # @abstractmethod
     # def calculate_gpa(self, scores: list[float]) -> float: ...
+    def calculate_gpa(self, scores: list[float]) -> float:
+        pass   
 
     # TODO 2: Define abstractmethod get_standing(self, gpa: float) -> str
-
+    # @abstractmethod
+    # def get_standing(self, gpa: float) -> str: ...
+    def get_standing(self, gpa: float) -> str:
+        pass
     # TODO 3: Implement concrete method format_report(self, student_name: str, scores: list[float]) -> str
     def format_report(self, student_name: str, scores: list[float]) -> str:
         pass

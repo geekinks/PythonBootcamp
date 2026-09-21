@@ -6,12 +6,13 @@ Complete the TODO items below and run this file to test your solution.
 class User:
     def __init__(self, name: str, email: str):
         # TODO 1: Initialize self.name and self.email
+        self.name=name
+        self.email=email 
         pass
 
     def get_role(self) -> str:
         # TODO 2: Return default role string "User"
-        pass
-
+        return "User"
     def format_header(self) -> str:
         return f"[{self.get_role()}] {self.name} <{self.email}>"
 
@@ -19,22 +20,27 @@ class User:
 class Student(User):
     def __init__(self, name: str, email: str, matric_no: str, level: int = 100):
         # TODO 3: Call super().__init__(name, email)
+        super().__init__(name, email)
         # TODO 4: Initialize self.matric_no and self.level
-        pass
+        self.matric_no = matric_no
+        self.level = level
 
     def get_role(self) -> str:
         # TODO 5: Override to return "Student"
-        pass
+        return "Student"
 
 
 class Lecturer(User):
     def __init__(self, name: str, email: str, staff_id: str, department: str):
         # TODO 6: Call super().__init__(name, email)
+        super().__init__(name, email)
         # TODO 7: Initialize self.staff_id and self.department
-        pass
+        self.staff_id = staff_id
+        self.department = department
 
     def get_role(self) -> str:
         # TODO 8: Override to return "Lecturer"
+        return "Lecturer"
         pass
 
 
