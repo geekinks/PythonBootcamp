@@ -13,22 +13,15 @@ class Course:
 class Transcript:
     def __init__(self):
         # TODO 1: Initialize protected dict _grades = {}
-        self._grades = {}
         pass
 
     def add_grade(self, course_code: str, score: float):
         # TODO 2: Validate 0 <= score <= 100, then store in _grades
-        if not (0 <= score <= 100):
-            raise ValueError("Score must be between 0 and 100")
-        self._grades[course_code] = score
         pass
 
     def get_gpa(self) -> float:
         # TODO 3: Return average of scores or 0.0 if empty
-        if not self._grades:
-            return 0.0
-        total = sum(self._grades.values())
-        return total / len(self._grades)
+        pass
 
 
 class Student:
@@ -36,29 +29,25 @@ class Student:
         self.name = name
         self.matric_no = matric_no
         # TODO 4: Initialize self.transcript as a new Transcript instance (Composition)
-        self.transcript = Transcript()
+        pass
 
     def record_score(self, course_code: str, score: float):
         # TODO 5: Delegate adding grade to self.transcript
-        self.transcript.add_grade(course_code, score)   
+        pass
 
 
 class Department:
     def __init__(self, name: str):
         self.name = name
         # TODO 6: Initialize empty lists self.students and self.courses (Aggregation)
-        self.students = []
-        self.courses = []                   
         pass
 
     def add_student(self, student: Student):
         # TODO 7: Append student
-        self.students.append(student)
         pass
 
     def add_course(self, course: Course):
         # TODO 8: Append course
-        self.courses.append(course)
         pass
 
 
