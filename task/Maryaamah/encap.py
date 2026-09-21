@@ -8,25 +8,32 @@ class GradeBook:
         self.student_id = student_id
         # TODO 1: Initialize protected attribute `_scores` as empty dict
         pass
-
+        self._scores = {}
     def record_score(self, course_code: str, score: float):
         # TODO 2: Validate score is int or float, and 0 <= score <= 100. Raise ValueError if invalid.
+        if not isinstance(score, (int, float)):
+            raise ValueError("Score must be a number")
+        if not 0 <= score <= 100:
+            raise ValueError("Score must be between 0 and 100")
         # TODO 3: Store float(score) into self._scores[course_code]
         pass
 
     def get_score(self, course_code: str) -> float | None:
         # TODO 4: Return score for course_code or None if not found
         pass
-
+        return self._scores.get(course_code)
     @property
     def average_score(self) -> float:
         # TODO 5: Calculate and return average of all scores (or 0.0 if empty)
         pass
-
+        if not self._scores:
+          return 0.0
+        return sum(self._scores.values()) / len(self._scores)
     @property
     def all_scores(self) -> dict[str, float]:
         # TODO 6: Return a defensive COPY of self._scores (.copy())
         pass
+        return self._scores.copy()
 
 
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
