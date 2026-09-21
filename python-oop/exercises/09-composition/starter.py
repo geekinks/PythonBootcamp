@@ -13,43 +13,51 @@ class Course:
 class Transcript:
     def __init__(self):
         # TODO 1: Initialize protected dict _grades = {}
-        pass
+        self._grades = {}
 
     def add_grade(self, course_code: str, score: float):
         # TODO 2: Validate 0 <= score <= 100, then store in _grades
-        pass
+        if not 0 <= score <= 100:
+            raise ValueError("Score must be between 0 and 100.")
+
+        self._grades[course_code] = score
 
     def get_gpa(self) -> float:
         # TODO 3: Return average of scores or 0.0 if empty
-        pass
+        if not self._grades:
+            return 0.0
+
+        return sum(self._grades.values()) / len(self._grades)
 
 
 class Student:
     def __init__(self, name: str, matric_no: str):
         self.name = name
         self.matric_no = matric_no
-        # TODO 4: Initialize self.transcript as a new Transcript instance (Composition)
-        pass
+
+        # TODO 4: Composition
+        self.transcript = Transcript()
 
     def record_score(self, course_code: str, score: float):
-        # TODO 5: Delegate adding grade to self.transcript
-        pass
+        # TODO 5: Delegate adding grade to transcript
+        self.transcript.add_grade(course_code, score)
 
 
 class Department:
     def __init__(self, name: str):
         self.name = name
-        # TODO 6: Initialize empty lists self.students and self.courses (Aggregation)
-        pass
+
+        # TODO 6: Aggregation
+        self.students = []
+        self.courses = []
 
     def add_student(self, student: Student):
         # TODO 7: Append student
-        pass
+        self.students.append(student)
 
     def add_course(self, course: Course):
         # TODO 8: Append course
-        pass
-
+        self.courses.append(course)
 
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
 if __name__ == "__main__":
