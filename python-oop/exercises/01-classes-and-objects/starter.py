@@ -4,25 +4,26 @@ Complete the TODO items below and run this file to test your solution.
 """
 
 # TODO 1: Define an empty class named Student
-class Student:
-    pass
+# class Student:
+#     pass
+
 
 # TODO 2: Define an empty class named Lecturer
-class Lecturer:
-    pass
+
 
 # TODO 3: Define an empty class named Course
-class Course:
-    pass
+
+
 
 # TODO 4: Instantiate two Student objects into variables `student1` and `student2`
-student1 = Student()
-student2 = Student()
-# TODO 5: Instantiate one Lecturer object into `lecturer1`
-lecturer1 = Lecturer()
-# TODO 6: Instantiate one Course object into `course1`
-course1 = Course()
+student1 = None
+student2 = None
 
+# TODO 5: Instantiate one Lecturer object into `lecturer1`
+lecturer1 = None
+
+# TODO 6: Instantiate one Course object into `course1`
+course1 = None
 
 
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
