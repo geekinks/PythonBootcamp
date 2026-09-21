@@ -15,27 +15,45 @@ class Student:
 
     @classmethod
     def _generate_matric_no(cls) -> str:
-        # TODO 1: Increment cls._enrollment_counter by 1 and return formatted string "GSU/CSC/{counter:04d}"
-        pass
+        # TODO 1: Increment counter and generate matric number
+        cls._enrollment_counter += 1
+        return f"GSU/CSC/{cls._enrollment_counter:04d}"
 
     @classmethod
     def from_csv(cls, csv_string: str):
-        # TODO 2: Parse comma-separated "Name, Email, Level"
-        # Generate matric using cls._generate_matric_no()
-        # Return new cls instance
-        pass
+        # TODO 2: Parse "Name, Email, Level"
+        name, email, level = csv_string.split(",")
+
+        # Remove extra spaces
+        name = name.strip()
+        email = email.strip()
+        level = int(level.strip())
+
+        # Generate matric number
+        matric_no = cls._generate_matric_no()
+
+        # Return a new Student object
+        return cls(name, email, matric_no, level)
 
     @classmethod
     def from_dict(cls, payload: dict):
-        # TODO 3: Parse dictionary payload, generate matric number, and return new cls instance
-        pass
+        # TODO 3: Parse dictionary payload
+        name = payload["name"]
+        email = payload["email"]
+        level = payload["level"]
+
+        # Generate matric number
+        matric_no = cls._generate_matric_no()
+
+        # Return a new Student object
+        return cls(name, email, matric_no, level)
 
     @staticmethod
     def validate_email(email: str) -> bool:
-        # TODO 4: Return True if email contains '@' and ends with ('.edu' or '.com'), else False
-        pass
-
-
+        # TODO 4: Check email format
+        return "@" in email and (
+            email.endswith(".edu") or email.endswith(".com")
+        )
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
 if __name__ == "__main__":
     assert Student.validate_email("aisha@uni.edu") is True
