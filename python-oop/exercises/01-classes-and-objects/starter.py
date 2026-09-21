@@ -4,24 +4,39 @@ Complete the TODO items below and run this file to test your solution.
 """
 
 # TODO 1: Define an empty class named Student
+from unicodedata import name
+
+
 class Student:
+    def _init_(self,name,age):
+        self.name =name
+        self.age =age
+    
     pass
 
 # TODO 2: Define an empty class named Lecturer
 class Lecturer:
+    def _init_(self, name, age):
+        self.name=name
+        self.age=age
+
     pass
 
 # TODO 3: Define an empty class named Course
 class Course:
+    def _init_(self,title,code):
+        self.title=title
+        self.code=code
+
     pass
 
 # TODO 4: Instantiate two Student objects into variables `student1` and `student2`
-student1 = Student()
-student2 = Student()
+student1 = Student("maryam",21)
+student2 = Student("mero",20)
 # TODO 5: Instantiate one Lecturer object into `lecturer1`
-lecturer1 = Lecturer()
+lecturer1 = Lecturer("Ahmad",45)
 # TODO 6: Instantiate one Course object into `course1`
-course1 = Course()
+course1 = Course("introduction to oop", "cs201")
 
 
 
