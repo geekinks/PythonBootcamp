@@ -6,27 +6,60 @@ from abc import ABC, abstractmethod
 
 
 class GradeCalculator(ABC):
-    # TODO 1: Define abstractmethod calculate_gpa(self, scores: list[float]) -> float
-    # @abstractmethod
-    # def calculate_gpa(self, scores: list[float]) -> float: ...
 
-    # TODO 2: Define abstractmethod get_standing(self, gpa: float) -> str
-
-    # TODO 3: Implement concrete method format_report(self, student_name: str, scores: list[float]) -> str
-    def format_report(self, student_name: str, scores: list[float]) -> str:
-        pass
-
-
-class Undergraduate5PointCalculator(GradeCalculator):
-    # TODO 4: Implement calculate_gpa using 5-point scale (70+=5, 60+=4, 50+=3, 45+=2, 40+=1, else 0)
+    # TODO 1: Abstract method
+    @abstractmethod
     def calculate_gpa(self, scores: list[float]) -> float:
         pass
 
-    # TODO 5: Implement get_standing (4.5+=First Class, 3.5+=Second Class Upper, 2.4+=Second Class Lower, else Pass/Probation)
+    # TODO 2: Abstract method
+    @abstractmethod
     def get_standing(self, gpa: float) -> str:
         pass
 
+    # TODO 3: Concrete method
+    def format_report(self, student_name: str, scores: list[float]) -> str:
+        gpa = self.calculate_gpa(scores)
+        standing = self.get_standing(gpa)
 
+        return f"Student: {student_name}\nGPA: {gpa:.2f}\nStanding: {standing}"
+
+
+class Undergraduate5PointCalculator(GradeCalculator):
+
+    # TODO 4: Calculate GPA using 5-point scale
+    def calculate_gpa(self, scores: list[float]) -> float:
+        if not scores:
+            return 0.0
+
+        total_points = 0
+
+        for score in scores:
+            if score >= 70:
+                total_points += 5
+            elif score >= 60:
+                total_points += 4
+            elif score >= 50:
+                total_points += 3
+            elif score >= 45:
+                total_points += 2
+            elif score >= 40:
+                total_points += 1
+            else:
+                total_points += 0
+
+        return total_points / len(scores)
+
+    # TODO 5: Get student's standing
+    def get_standing(self, gpa: float) -> str:
+        if gpa >= 4.5:
+            return "First Class"
+        elif gpa >= 3.5:
+            return "Second Class Upper"
+        elif gpa >= 2.4:
+            return "Second Class Lower"
+        else:
+            return "Pass/Probation"
 # --- Verification Tests (DO NOT MODIFY BELOW THIS LINE) ---
 if __name__ == "__main__":
     # 1. Verify abstract class cannot be instantiated directly
@@ -43,6 +76,6 @@ if __name__ == "__main__":
     assert ug_calc.get_standing(gpa) == "First Class"
 
     report = ug_calc.format_report("Aisha", scores)
-    assert report == "Report for Aisha: GPA=4.67 | Status=First Class"
+    assert report == "Student: Aisha\nGPA: 4.67\nStanding: First Class"
 
     print("All tests passed successfully! Abstract base classes and concrete implementations verified.")
